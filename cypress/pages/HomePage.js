@@ -4,7 +4,7 @@ class HomePage {
     }
 
     acceptCookiesButton(){
-        return cy.get('[data-ref="cookie.accept-all"]', { timeout: 10000 })
+        cy.get('[data-ref="cookie.accept-all"]', { timeout: 10000 }).click()
     }
 
     fromInput(){
@@ -23,6 +23,10 @@ class HomePage {
         return cy.get('span[data-ref="airport-item__name"]')
     }
 
+    selectMonth() {
+        cy.get(':nth-child(10) > .m-toggle__month').click()
+    }
+
     selectDepartureDate(date){
         return cy.get("div[tabindex='0'][data-id='" + date +"']")
     }
@@ -32,7 +36,7 @@ class HomePage {
     }
 
     searchButton(){
-        return cy.get('.flight-search-widget__start-search-cta', { timeout: 10000 })
+        return cy.get('.flight-search-widget__start-search-cta', { timeout: 10000 }).click()
     }
 
     selectFromToDestinations(from, to){
