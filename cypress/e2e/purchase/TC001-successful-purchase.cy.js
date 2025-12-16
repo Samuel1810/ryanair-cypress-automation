@@ -1,5 +1,6 @@
-import HomePage from '../../pages/HomePage';
-import BookingDetails from '../../pages/BookingDetails';
+import HomePage from '../../pages/HomePage'
+import BookingDetails from '../../pages/BookingDetails'
+import { getISODatePlusDays } from '../../support/dateUtils'
 
 describe('Successful Purchase Flow', () => {
     it('should complete a purchase successfully', () => {
@@ -15,8 +16,11 @@ describe('Successful Purchase Flow', () => {
         HomePage.selectMonth()
 
         // Select departure and return dates
-        HomePage.selectDepartureDate('2026-06-24').click()
-        HomePage.selectReturnDate('2026-07-23').click()
+        const departureDate = Cypress.env('departureDate') || getISODatePlusDays(30)
+        const returnDate = Cypress.env('returnDate') || getISODatePlusDays(37)
+
+        HomePage.selectDepartureDate(departureDate).click()
+        HomePage.selectReturnDate(returnDate).click()
 
         // Click on search button
         HomePage.searchButton()
