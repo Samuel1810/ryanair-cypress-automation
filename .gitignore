@@ -4,7 +4,13 @@ node_modules/
 # Cypress artifacts (generated)
 cypress/videos/
 cypress/screenshots/
+artifacts/
+
 
 # Env
 .env
 cypress.env.json
+
+# macOS
+.DS_Store
+
