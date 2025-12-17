@@ -161,6 +161,8 @@ cd ryanair-cypress-automation
 npm ci
 ```
 
+> `npm ci` is recommended to ensure a clean and reproducible install.
+
 ### 3. Create local env file
 
 Create `cypress.env.json` (see `cypress.env.example.json`).
@@ -182,8 +184,6 @@ npx cypress run
 ```bash
 npx cypress run --spec "cypress/e2e/purchase/TC001-successful-purchase.cy.js"
 ```
-
-> `npm ci` is recommended to ensure a clean and reproducible install.
 
 ### NPM Scripts (optional)
 
