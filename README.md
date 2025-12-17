@@ -151,7 +151,7 @@ package.json
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/ryanair-cypress-automation.git
+git clone https://github.com/Samuel1810/ryanair-cypress-automation.git
 cd ryanair-cypress-automation
 ```
 
