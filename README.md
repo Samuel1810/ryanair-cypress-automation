@@ -151,15 +151,17 @@ package.json
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/ryanair-cypress-automation.git
+git clone https://github.com/Samuel1810/ryanair-cypress-automation.git
 cd ryanair-cypress-automation
 ```
 
 ### 2. Install dependencies
 
 ```bash
-npm install
+npm ci
 ```
+
+> `npm ci` is recommended to ensure a clean and reproducible install.
 
 ### 3. Create local env file
 
